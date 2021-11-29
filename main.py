@@ -46,9 +46,9 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         if self.s:
             qp = QPainter()
             qp.begin(self)
-            c = QColor("yellow")
-            qp.setBrush(c)
             for i in range(10):
+                c = QColor(randint(0, 255), randint(0, 255), randint(0, 255))
+                qp.setBrush(c)
                 x, y = randint(0, 900), randint(0, 900)
                 r = randint(1, 200)
                 qp.drawEllipse(x, y, r, r)
